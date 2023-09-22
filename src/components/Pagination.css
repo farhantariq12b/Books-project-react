@@ -1,0 +1,6 @@
+.paginationContainer {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  align-self: center;
+}
