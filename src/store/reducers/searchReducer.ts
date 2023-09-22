@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const searchSlice = createSlice({
-  name: "product",
+  name: "search",
   initialState: "",
   reducers: {
-    setSearch: (state) => {
-      state += 1;
+    setSearch: (state, action) => {
+      console.log(action);
+      // Update the search query in both state and local storage
+      localStorage.setItem("searchQuery", action.payload);
+      return (state = action.payload);
     },
   },
 });
