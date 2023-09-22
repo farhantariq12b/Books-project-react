@@ -31,3 +31,35 @@
         color: '#FA7C26' !important;
     }
 }
+
+.cover_image {
+    margin: 10px 0px;
+}
+
+.cover_image img {
+    width: 200px;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.description {
+    flex-direction: column;
+}
+
+.details span {
+    font-weight: 600;
+}
+
+@media (max-width:768px) {
+    .details {
+        flex-direction: column;
+    }
+
+    .cover_image {
+        margin: 0 auto;
+    }
+}
