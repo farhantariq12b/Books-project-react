@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 import "./SearchBar.css";
 import { useAppDispatch } from "../hooks/hook";
 import { setSearch } from "../store/reducers/searchReducer";
+import { setZero } from "../store/reducers/paginationReducer";
 
 const SearchBar: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -11,6 +12,7 @@ const SearchBar: React.FC = () => {
   const debouncedSearch = useCallback(
     debounce((searchQuery:any) => {
       dispatch(setSearch(searchQuery));
+      dispatch(setZero());
     }, 300), // Adjust the debounce delay as needed
     [dispatch]
   ); // Adjust the debounce delay as needed

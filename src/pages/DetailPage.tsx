@@ -1,6 +1,8 @@
 import './Detail.css';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import noImage from '../assests/No_image.jpg'
+
 
 const DetailPage: React.FC<any> = () => {
   const { books } = useSelector((state: any) => state.book);
@@ -17,7 +19,7 @@ const DetailPage: React.FC<any> = () => {
       <div className="details">
         <div className="cover_image">
           <img
-            src={bookDetail?.volumeInfo?.imageLinks?.thumbnail || ''}
+            src={bookDetail?.volumeInfo?.imageLinks?.thumbnail ?? noImage}
             alt="book_image"
           />
         </div>

@@ -1,3 +1,12 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 80vh;
+    width: 100vw;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -32,7 +41,7 @@ body {
 .contentTitle {
     height: 80px;
     width: 340px;
-    font-family: 'Roboto';
+    /* font-family: 'Roboto'; */
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -43,10 +52,20 @@ body {
 
 .card {
     max-height: 40rem;
+    min-height: 20rem;
+    max-width: 25rem;
+    overflow: hidden;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .imgage {
-    width: 100%;
-    max-height: 10rem;
-    aspect-ratio: 1/1;
+    max-height: 20rem;
+    object-fit: contain;
+    overflow: hidden;
 }
